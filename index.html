@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAKMAL Tech News - The Future is Here</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            text: '#f8fafc'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-dark-text font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="absolute inset-0 bg-dark-bg/80 backdrop-blur-md border-b border-white/10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30">
+                        L
+                    </div>
+                    <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">LAKMAL</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-brand-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#news" class="hover:text-brand-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">Latest News</a>
+                        <a href="#reviews" class="hover:text-brand-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">Reviews</a>
+                        <a href="#gadgets" class="hover:text-brand-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">Gadgets</a>
+                    </div>
+                </div>
+                <div>
+                    <button class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-2 rounded-full font-medium transition-all shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 transform hover:scale-105 active:scale-95">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 -left-64 w-96 h-96 bg-brand-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse-slow"></div>
+        <div class="absolute bottom-0 -right-64 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse-slow animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-xs font-medium tracking-wider text-gray-300 uppercase">Live Tech Updates</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                    Discover the <br>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-purple-500">Future of Tech</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-lg">
+                    Stay ahead with "LAKMAL Tech". Your daily dose of breaking news, in-depth reviews, and the hottest gadgets from around the globe.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#news" class="px-8 py-4 bg-white text-dark-bg font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl shadow-white/10 transform hover:-translate-y-1">
+                        Read News
+                    </a>
+                    <button class="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all backdrop-blur-sm">
+                        Watch Reviews
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Hero Image / Visual -->
+            <div class="relative animate-float">
+                <div class="absolute inset-0 bg-gradient-to-tr from-brand-500 to-purple-600 rounded-3xl blur-2xl opacity-30 transform rotate-6"></div>
+                <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-dark-card group">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-60 z-10"></div>
+                    <!-- Using a high quality tech placeholder image -->
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Futuristic Tech" 
+                         class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <span class="bg-brand-500 text-white text-xs px-2 py-1 rounded-md mb-2 inline-block">Featured</span>
+                        <h3 class="text-xl font-bold">Cyberpunk Reality: The New Era</h3>
+                    </div>
+                </div>
+                
+                <!-- Floating Elements -->
+                <div class="absolute -right-8 top-12 p-4 bg-dark-card/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl animate-bounce" style="animation-duration: 3s;">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">Trending</p>
+                            <p class="font-bold">AI Revolution</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest <span class="text-brand-500">Updates</span></h2>
+                    <p class="text-gray-400">Breaking news from the technology world</p>
+                </div>
+                <button class="hidden md:flex items-center gap-2 text-brand-400 hover:text-brand-300 transition-colors">
+                    View All <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </button>
+            </div>
+
+            <!-- News Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <article class="group relative bg-dark-card rounded-2xl overflow-hidden border border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-2 cursor-pointer">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" 
+                             alt="AI Chip" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-20">
+                            <span class="px-3 py-1 bg-brand-600/90 backdrop-blur-md rounded-full text-xs font-semibold text-white">Hardware</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-xs text-gray-500 mb-3">
+                            <span>Feb 10, 2026</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-brand-400 transition-colors">Next Gen AI Chips Revealed</h3>
+                        <p class="text-gray-400 text-sm line-clamp-2">
+                            The latest processors promise a 500% increase in neural processing capabilities, changing the landscape of machine learning...
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="group relative bg-dark-card rounded-2xl overflow-hidden border border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-2 cursor-pointer">
+                    <div class="h-64 overflow-hidden relative">
+                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1531297461136-820727139904?q=80&w=1000&auto=format&fit=crop" 
+                             alt="VR Headset" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-20">
+                            <span class="px-3 py-1 bg-purple-600/90 backdrop-blur-md rounded-full text-xs font-semibold text-white">Gaming</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-xs text-gray-500 mb-3">
+                            <span>Feb 09, 2026</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-brand-400 transition-colors">VR Gaming takes a leap</h3>
+                        <p class="text-gray-400 text-sm line-clamp-2">
+                            Immersive technology has reached a tipping point with the new "Vision X" headset, offering tactile feedback suits...
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="group relative bg-dark-card rounded-2xl overflow-hidden border border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-2 cursor-pointer">
+                    <div class="h-64 overflow-hidden relative">
+                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Robotics" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 z-20">
+                            <span class="px-3 py-1 bg-green-600/90 backdrop-blur-md rounded-full text-xs font-semibold text-white">Robotics</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-xs text-gray-500 mb-3">
+                            <span>Feb 08, 2026</span>
+                            <span>•</span>
+                            <span>3 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-brand-400 transition-colors">Robots in our Homes?</h3>
+                        <p class="text-gray-400 text-sm line-clamp-2">
+                            Tesla's new Optimus update suggests domestic robots might be closer than we think. Here's what we know so far...
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gadget Gallery Section (Multi Image Request) -->
+    <section id="gadgets" class="py-24 bg-dark-bg relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-900/10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Trending <span class="text-brand-500">Gadgets</span></h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                <!-- Bento Grid Layout -->
+                <div class="col-span-2 row-span-2 relative rounded-3xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2078&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gadget 1">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <h4 class="text-2xl font-bold text-white">Smart Wearables</h4>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">The new wave of connectivity</p>
+                    </div>
+                </div>
+                
+                <div class="col-span-1 row-span-1 relative rounded-3xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gadget 2">
+                </div>
+                
+                <div class="col-span-1 row-span-1 relative rounded-3xl overflow-hidden group">
+                     <img src="https://images.unsplash.com/photo-1580910051074-3eb6948d3ea0?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gadget 3">
+                </div>
+
+                <div class="col-span-2 row-span-1 relative rounded-3xl overflow-hidden group">
+                     <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gadget 4">
+                     <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-bold text-lg border-b-2 border-brand-500">View Collection</span>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark-bg pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                     <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-500 to-purple-600 flex items-center justify-center text-white font-bold shadow-lg">L</div>
+                        <span class="text-xl font-bold text-white">LAKMAL</span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm">
+                        Design by Lakmal. Bringing you the latest in technology, innovation, and digital culture.
+                        <br><br>
+                        Colombo, Sri Lanka.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">AI & Robotics</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Consumer Tech</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Development</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2026 Lakmal Tech. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
